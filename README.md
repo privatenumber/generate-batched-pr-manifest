@@ -44,7 +44,7 @@ The PR body will be set to:
 - ...
 ```
 
-## How does it work?
+## What does this script do?
 
 1. Fetches the commits from the provided batched PR
 2. Searches the repository for PRs that include commits from the batched PR and either has the same base branch or the base branch set to the batched PR.
