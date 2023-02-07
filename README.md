@@ -20,6 +20,11 @@ You can add it to the PR description so it's easy to see what PRs are included i
 $ cd <repo>
 
 $ npx generate-batched-pr-manifest <batched pr number>
+
+# Pull requests
+- https://github.com/my-repo/project/pull/1234
+- https://github.com/my-repo/project/pull/1235
+- https://github.com/my-repo/project/pull/1236
 ```
 
 ### Update the PR title & description
@@ -31,6 +36,10 @@ Automatically the PR title & description with the manifest.
 $ cd <repo>
 
 $ npx generate-batched-pr-manifest <batched pr number> --update
+
+# Pull requests
+- https://github.com/my-repo/project/pull/1234
+...
 ```
 
 The PR title will be set to: `batch: <ISO date> (<number of PRs> PRs)`
