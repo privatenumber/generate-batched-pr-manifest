@@ -1,0 +1,25 @@
+{
+  "name": "generate-batched-pr-manifest",
+  "version": "0.0.0-semantic-release",
+  "description": "Generate a manifest of all the PRs included in a batched PR",
+  "keywords": [
+    "git",
+    "batched pr",
+    "manifest"
+  ],
+  "license": "MIT",
+  "repository": "privatenumber/generate-batched-pr-manifest",
+  "funding": "https://github.com/privatenumber/generate-batched-pr-manifest?sponsor=1",
+  "author": {
+    "name": "Hiroki Osame",
+    "email": "hiroki.osame@gmail.com"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "bin": "dist/index.cjs",
+  "dependencies": {
+    "tasuku": "^2.0.1"
+  }
+}
