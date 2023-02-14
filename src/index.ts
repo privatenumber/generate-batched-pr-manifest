@@ -8,6 +8,8 @@ import {
 	updatePr,
 } from './utils.js';
 
+const getIsoDate = () => (new Date()).toISOString().split('T')[0];
+
 cli({
 	name: 'generate-batched-pr-manifest',
 
@@ -21,6 +23,11 @@ cli({
 		update: {
 			type: Boolean,
 			description: 'Update the PR title & description with the manifest',
+		},
+		name: {
+			type: String,
+			description: 'Name of the PR. Defaults to the date in ISO format.',
+			default: getIsoDate(),
 		},
 	},
 
@@ -64,10 +71,9 @@ cli({
 		}`;
 
 		if (argv.flags.update) {
-			const isoDate = (new Date()).toISOString().split('T')[0];
 			await updatePr(
 				prNumber,
-				`batch: ${isoDate} (${uniquePrs.length.toLocaleString()} PRs)`,
+				`batch: ${argv.flags.name} (${uniquePrs.length.toLocaleString()} PRs)`,
 				manifest,
 			);
 			console.log(`${green('✔')} Successfully updated the PR\n`);
